@@ -17,8 +17,6 @@ package org.eclipse.gemini.blueprint.test;
 import java.net.URL;
 import java.util.Enumeration;
 
-import org.eclipse.gemini.blueprint.extender.internal.util.concurrent.Counter;
-import org.eclipse.gemini.blueprint.extender.support.internal.ConfigUtils;
 import org.eclipse.gemini.blueprint.util.OsgiBundleUtils;
 import org.eclipse.gemini.blueprint.util.OsgiListenerUtils;
 import org.eclipse.gemini.blueprint.util.OsgiStringUtils;

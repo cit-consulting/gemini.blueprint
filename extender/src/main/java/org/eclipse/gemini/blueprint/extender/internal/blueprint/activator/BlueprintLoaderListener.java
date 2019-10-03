@@ -16,12 +16,12 @@ package org.eclipse.gemini.blueprint.extender.internal.blueprint.activator;
 
 import org.eclipse.gemini.blueprint.extender.OsgiApplicationContextCreator;
 import org.eclipse.gemini.blueprint.extender.internal.activator.*;
-import org.eclipse.gemini.blueprint.extender.internal.blueprint.activator.support.BlueprintConfigUtils;
 import org.eclipse.gemini.blueprint.extender.internal.blueprint.activator.support.BlueprintContainerConfig;
 import org.eclipse.gemini.blueprint.extender.internal.blueprint.activator.support.BlueprintContainerCreator;
 import org.eclipse.gemini.blueprint.extender.internal.blueprint.event.EventAdminDispatcher;
 import org.eclipse.gemini.blueprint.extender.internal.support.ExtenderConfiguration;
 import org.eclipse.gemini.blueprint.extender.support.ApplicationContextConfiguration;
+import org.eclipse.gemini.blueprint.util.BlueprintConfigUtils;
 import org.osgi.framework.Bundle;
 import org.osgi.framework.BundleContext;
 

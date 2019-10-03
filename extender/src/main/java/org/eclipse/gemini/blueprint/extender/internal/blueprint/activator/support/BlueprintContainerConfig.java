@@ -18,9 +18,10 @@ import java.util.Dictionary;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.eclipse.gemini.blueprint.util.BlueprintConfigUtils;
+import org.eclipse.gemini.blueprint.util.ConfigUtils;
 import org.osgi.framework.Bundle;
 import org.eclipse.gemini.blueprint.extender.support.ApplicationContextConfiguration;
-import org.eclipse.gemini.blueprint.extender.support.internal.ConfigUtils;
 import org.eclipse.gemini.blueprint.util.OsgiStringUtils;
 
 /**

@@ -21,7 +21,7 @@ import org.aopalliance.intercept.MethodInvocation;
 import org.eclipse.gemini.blueprint.context.support.internal.classloader.ClassLoaderFactory;
 import org.eclipse.gemini.blueprint.service.importer.ImportedOsgiServiceProxy;
 import org.eclipse.gemini.blueprint.service.importer.OsgiServiceLifecycleListener;
-import org.eclipse.gemini.blueprint.util.internal.PrivilegedUtils;
+import org.eclipse.gemini.blueprint.util.PrivilegedUtils;
 import org.osgi.framework.Bundle;
 import org.springframework.util.ObjectUtils;
 

@@ -17,9 +17,8 @@ package org.eclipse.gemini.blueprint.extender.internal.util;
 import java.util.Dictionary;
 import java.util.Properties;
 
-import org.eclipse.gemini.blueprint.extender.support.internal.ConfigUtils;
-
 import junit.framework.TestCase;
+import org.eclipse.gemini.blueprint.util.ConfigUtils;
 
 /**
  * @author Costin Leau
@@ -50,7 +49,7 @@ public class HeaderConstantsTest extends TestCase {
 
 	/**
 	 * Test method for
-	 * {@link org.eclipse.gemini.blueprint.util.internal.ConfigUtils#getSpringContextHeader(java.util.Dictionary)}.
+	 * {@link org.eclipse.gemini.blueprint.util.ConfigUtils#getSpringContextHeader(java.util.Dictionary)}.
 	 */
 	public void testGetServiceContextHeader() {
 		assertNull(ConfigUtils.getSpringContextHeader(headers));
@@ -61,7 +60,7 @@ public class HeaderConstantsTest extends TestCase {
 
 	/**
 	 * Test method for
-	 * {@link org.eclipse.gemini.blueprint.util.internal.ConfigUtils#getDirectiveValue(java.lang.String, java.lang.String)}.
+	 * {@link org.eclipse.gemini.blueprint.util.ConfigUtils#getDirectiveValue(java.lang.String, java.lang.String)}.
 	 */
 	public void testGetDirectiveValue() {
 		String header = "bla bla";
@@ -79,7 +78,7 @@ public class HeaderConstantsTest extends TestCase {
 
 	/**
 	 * Test method for
-	 * {@link org.eclipse.gemini.blueprint.util.internal.ConfigUtils#getPublishContext(java.util.Dictionary)}.
+	 * {@link org.eclipse.gemini.blueprint.util.ConfigUtils#getPublishContext(java.util.Dictionary)}.
 	 */
 	public void testGetDontPublishContext() {
 		String header = "nothing";
@@ -101,7 +100,7 @@ public class HeaderConstantsTest extends TestCase {
 
 	/**
 	 * Test method for
-	 * {@link org.eclipse.gemini.blueprint.util.internal.ConfigUtils#getCreateAsync(java.util.Dictionary)}.
+	 * {@link org.eclipse.gemini.blueprint.util.ConfigUtils#getCreateAsync(java.util.Dictionary)}.
 	 */
 	public void testGetCreateAsync() {
 		String header = "nothing";
@@ -123,7 +122,7 @@ public class HeaderConstantsTest extends TestCase {
 
 	/**
 	 * Test method for
-	 * {@link org.eclipse.gemini.blueprint.util.internal.ConfigUtils#getTimeout(java.util.Dictionary)}.
+	 * {@link org.eclipse.gemini.blueprint.util.ConfigUtils#getTimeout(java.util.Dictionary)}.
 	 */
 	public void testGetTimeout() {
 		String header = "nothing";

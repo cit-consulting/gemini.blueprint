@@ -13,6 +13,7 @@
  *****************************************************************************/
 package org.eclipse.gemini.blueprint.extender.internal.activator;
 
+import org.eclipse.gemini.blueprint.activators.VersionMatcher;
 import org.eclipse.gemini.blueprint.context.DelegatedExecutionOsgiBundleApplicationContext;
 import org.eclipse.gemini.blueprint.extender.OsgiApplicationContextCreator;
 import org.eclipse.gemini.blueprint.extender.internal.support.ExtenderConfiguration;

@@ -16,6 +16,7 @@ package org.eclipse.gemini.blueprint.extender.internal.activator;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.eclipse.gemini.blueprint.activators.VersionMatcher;
 import org.eclipse.gemini.blueprint.context.ConfigurableOsgiBundleApplicationContext;
 import org.eclipse.gemini.blueprint.context.DelegatedExecutionOsgiBundleApplicationContext;
 import org.eclipse.gemini.blueprint.context.event.OsgiBundleApplicationContextEventMulticaster;
@@ -25,11 +26,10 @@ import org.eclipse.gemini.blueprint.extender.internal.dependencies.shutdown.Shut
 import org.eclipse.gemini.blueprint.extender.internal.dependencies.startup.DependencyWaiterApplicationContextExecutor;
 import org.eclipse.gemini.blueprint.extender.internal.support.ExtenderConfiguration;
 import org.eclipse.gemini.blueprint.extender.internal.support.OsgiBeanFactoryPostProcessorAdapter;
-import org.eclipse.gemini.blueprint.extender.internal.util.concurrent.Counter;
-import org.eclipse.gemini.blueprint.extender.internal.util.concurrent.RunnableTimedExecution;
 import org.eclipse.gemini.blueprint.extender.support.ApplicationContextConfiguration;
 import org.eclipse.gemini.blueprint.util.OsgiBundleUtils;
 import org.eclipse.gemini.blueprint.util.OsgiStringUtils;
+import org.eclipse.gemini.blueprint.util.concurrent.Counter;
 import org.osgi.framework.Bundle;
 import org.osgi.framework.BundleContext;
 import org.springframework.beans.factory.DisposableBean;
@@ -40,7 +40,7 @@ import org.springframework.core.task.TaskExecutor;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
-import static org.eclipse.gemini.blueprint.extender.internal.util.concurrent.RunnableTimedExecution.execute;
+import static org.eclipse.gemini.blueprint.util.concurrent.RunnableTimedExecution.execute;
 
 /**
  * Manager handling the startup/shutdown threading issues regarding OSGi contexts. Used by {@link ContextLoaderListener}

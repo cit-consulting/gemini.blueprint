@@ -16,8 +16,8 @@ package org.eclipse.gemini.blueprint.extender.support.scanning;
 
 import java.util.Enumeration;
 
-import org.eclipse.gemini.blueprint.extender.support.internal.ConfigUtils;
 import org.eclipse.gemini.blueprint.io.OsgiBundleResource;
+import org.eclipse.gemini.blueprint.util.ConfigUtils;
 import org.osgi.framework.Bundle;
 import org.springframework.util.ObjectUtils;
 

@@ -5,7 +5,7 @@
     <groupId>org.eclipse.gemini.blueprint</groupId>
     <artifactId>gemini-blueprint</artifactId>
     <!-- Note: When updating the version, ensure it is a valid OSGi version -->
-    <version>3.0.0.M01</version>
+    <version>3.0.0.M01_CITC2</version>
     <packaging>pom</packaging>
     <name>Gemini Blueprint</name>
     <url>http://www.eclipse.org/gemini/blueprint/</url>
@@ -23,7 +23,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <!-- Spring version -->
-        <spring.maven.artifact.version>5.0.4.RELEASE_1</spring.maven.artifact.version>
+        <spring.maven.artifact.version>5.1.5.RELEASE_1</spring.maven.artifact.version>
         <spring.base.version>5.0.0</spring.base.version>
 
         <symName.prefix>org.eclipse.gemini.blueprint</symName.prefix>
@@ -96,13 +96,13 @@
     <!--</notifiers>-->
     <!--</ciManagement>-->
 
-    <scm>
-        <url>http://git.eclipse.org/c/gemini.blueprint/org.eclipse.gemini.blueprint.git/</url>
-        <connection>scm:git:git//git.eclipse.org/gitroot/gemini.blueprint/org.eclipse.gemini.blueprint.git</connection>
-        <!-- hudson-based releases require this SCM url to point to the local FS, see https://bugs.eclipse.org/bugs/show_bug.cgi?id=512974 -->
-        <developerConnection>scm:git:file:///gitroot/gemini.blueprint/org.eclipse.gemini.blueprint.git</developerConnection>
-        <tag>3.0.0.M01</tag>
-  </scm>
+<!--    <scm>-->
+<!--        <url>http://git.eclipse.org/c/gemini.blueprint/org.eclipse.gemini.blueprint.git/</url>-->
+<!--        <connection>scm:git:git//git.eclipse.org/gitroot/gemini.blueprint/org.eclipse.gemini.blueprint.git</connection>-->
+<!--        &lt;!&ndash; hudson-based releases require this SCM url to point to the local FS, see https://bugs.eclipse.org/bugs/show_bug.cgi?id=512974 &ndash;&gt;-->
+<!--        <developerConnection>scm:git:file:///gitroot/gemini.blueprint/org.eclipse.gemini.blueprint.git</developerConnection>-->
+<!--        <tag>3.0.0.M01</tag>-->
+<!--  </scm>-->
 
     <developers>
         <developer>
@@ -1005,17 +1005,17 @@
     <!--          Website and reporting          -->
     <!-- ======================================= -->
 
-    <distributionManagement>
-        <downloadUrl>http://www.eclipse.org/gemini/blueprint/download/</downloadUrl>
-        <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
-        <repository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-        </repository>
-    </distributionManagement>
+<!--    <distributionManagement>-->
+<!--        <downloadUrl>http://www.eclipse.org/gemini/blueprint/download/</downloadUrl>-->
+<!--        <snapshotRepository>-->
+<!--            <id>ossrh</id>-->
+<!--            <url>https://oss.sonatype.org/content/repositories/snapshots</url>-->
+<!--        </snapshotRepository>-->
+<!--        <repository>-->
+<!--            <id>ossrh</id>-->
+<!--            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>-->
+<!--        </repository>-->
+<!--    </distributionManagement>-->
 
 
     <!-- ================================================ -->

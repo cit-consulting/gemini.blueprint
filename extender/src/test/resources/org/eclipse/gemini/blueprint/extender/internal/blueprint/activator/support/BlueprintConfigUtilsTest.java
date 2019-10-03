@@ -19,7 +19,6 @@ import java.util.Properties;
 
 import junit.framework.TestCase;
 
-import org.eclipse.gemini.blueprint.extender.internal.blueprint.activator.support.BlueprintConfigUtils;
 import org.osgi.framework.Constants;
 
 /**

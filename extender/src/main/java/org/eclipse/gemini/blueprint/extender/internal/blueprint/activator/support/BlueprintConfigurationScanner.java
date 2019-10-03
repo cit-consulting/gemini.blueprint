@@ -24,6 +24,7 @@ import org.apache.commons.logging.LogFactory;
 import org.eclipse.gemini.blueprint.extender.support.scanning.ConfigurationScanner;
 import org.eclipse.gemini.blueprint.io.OsgiBundleResource;
 import org.eclipse.gemini.blueprint.io.OsgiBundleResourcePatternResolver;
+import org.eclipse.gemini.blueprint.util.BlueprintConfigUtils;
 import org.osgi.framework.Bundle;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.ResourcePatternResolver;

@@ -43,8 +43,6 @@ public class ChainActivator implements BundleActivator {
 	public ChainActivator() {
         final LoggingActivator logStatus = new LoggingActivator();
         final JavaBeansCacheActivator activateJavaBeansCache = new JavaBeansCacheActivator();
-        final NamespaceHandlerActivator activateCustomNamespaceHandling = new NamespaceHandlerActivator();
-        final NamespaceHandlerActivator activateBlueprintspecificNamespaceHandling = new BlueprintNamespaceHandlerActivator();
         final ExtenderConfiguration initializeExtenderConfiguration = new ExtenderConfiguration();
         final ListenerServiceActivator activateListeners = new ListenerServiceActivator(initializeExtenderConfiguration);
         final ContextLoaderListener listenForSpringDmBundles = new ContextLoaderListener(initializeExtenderConfiguration);
@@ -56,8 +54,6 @@ public class ChainActivator implements BundleActivator {
 				CHAIN = new BundleActivator[] {
                         logStatus,
                         activateJavaBeansCache,
-                        activateCustomNamespaceHandling,
-                        activateBlueprintspecificNamespaceHandling,
                         initializeExtenderConfiguration,
                         activateListeners,
                         listenForSpringDmBundles,
@@ -69,7 +65,6 @@ public class ChainActivator implements BundleActivator {
 				CHAIN = new BundleActivator[] {
                         logStatus,
                         activateJavaBeansCache,
-                        activateCustomNamespaceHandling,
                         initializeExtenderConfiguration,
                         activateListeners,
                         listenForSpringDmBundles
@@ -80,7 +75,6 @@ public class ChainActivator implements BundleActivator {
             CHAIN = new BundleActivator[] {
                     logStatus,
                     activateJavaBeansCache,
-                    activateCustomNamespaceHandling,
                     initializeExtenderConfiguration,
                     activateListeners,
                     listenForSpringDmBundles

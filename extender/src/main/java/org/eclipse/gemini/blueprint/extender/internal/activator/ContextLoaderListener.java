@@ -17,11 +17,13 @@ package org.eclipse.gemini.blueprint.extender.internal.activator;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.eclipse.gemini.blueprint.activators.DefaultVersionMatcher;
+import org.eclipse.gemini.blueprint.activators.VersionMatcher;
+import org.eclipse.gemini.blueprint.activators.listeners.BaseListener;
 import org.eclipse.gemini.blueprint.extender.OsgiApplicationContextCreator;
-import org.eclipse.gemini.blueprint.extender.internal.activator.listeners.BaseListener;
 import org.eclipse.gemini.blueprint.extender.internal.support.ExtenderConfiguration;
 import org.eclipse.gemini.blueprint.extender.support.DefaultOsgiApplicationContextCreator;
-import org.eclipse.gemini.blueprint.extender.support.internal.ConfigUtils;
+import org.eclipse.gemini.blueprint.util.ConfigUtils;
 import org.eclipse.gemini.blueprint.util.OsgiBundleUtils;
 import org.eclipse.gemini.blueprint.util.OsgiStringUtils;
 import org.osgi.framework.*;

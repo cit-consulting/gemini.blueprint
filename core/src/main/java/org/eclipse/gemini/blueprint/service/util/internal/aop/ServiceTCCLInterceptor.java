@@ -17,7 +17,7 @@ package org.eclipse.gemini.blueprint.service.util.internal.aop;
 
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
-import org.eclipse.gemini.blueprint.util.internal.PrivilegedUtils;
+import org.eclipse.gemini.blueprint.util.PrivilegedUtils;
 import org.springframework.util.ObjectUtils;
 
 /**

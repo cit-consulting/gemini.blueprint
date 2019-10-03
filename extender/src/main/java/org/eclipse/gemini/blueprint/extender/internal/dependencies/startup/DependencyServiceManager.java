@@ -32,6 +32,7 @@ import java.util.Set;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.eclipse.gemini.blueprint.util.PrivilegedUtils;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.Filter;
 import org.osgi.framework.ServiceEvent;
@@ -46,7 +47,6 @@ import org.eclipse.gemini.blueprint.context.event.OsgiBundleApplicationContextEv
 import org.eclipse.gemini.blueprint.extender.OsgiServiceDependencyFactory;
 import org.eclipse.gemini.blueprint.extender.event.BootstrappingDependenciesEvent;
 import org.eclipse.gemini.blueprint.extender.event.BootstrappingDependencyEvent;
-import org.eclipse.gemini.blueprint.extender.internal.util.PrivilegedUtils;
 import org.eclipse.gemini.blueprint.service.importer.OsgiServiceDependency;
 import org.eclipse.gemini.blueprint.service.importer.event.OsgiServiceDependencyEvent;
 import org.eclipse.gemini.blueprint.service.importer.event.OsgiServiceDependencyWaitEndedEvent;

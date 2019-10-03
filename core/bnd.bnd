@@ -21,7 +21,7 @@ Import-Package: \
  org.springframework.*;version=${spring.version.range}, \
  *;resolution:="optional"
 
-
+Bundle-Activator: org.eclipse.gemini.blueprint.activators.ChainNamespaceHandlersActivator
 Bundle-Name: ${project.artifactId}
 Bundle-Version: ${project.version}
 Bundle-SymbolicName: ${spring.osgi.symbolic.name}

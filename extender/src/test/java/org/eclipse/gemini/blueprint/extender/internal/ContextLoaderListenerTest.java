@@ -16,7 +16,6 @@ package org.eclipse.gemini.blueprint.extender.internal;
 
 import java.util.Dictionary;
 import java.util.Hashtable;
-import java.util.Properties;
 
 import junit.framework.TestCase;
 
@@ -24,11 +23,11 @@ import static org.easymock.EasyMock.*;
 import org.eclipse.gemini.blueprint.extender.internal.activator.ContextLoaderListener;
 import org.eclipse.gemini.blueprint.extender.internal.support.ExtenderConfiguration;
 import org.eclipse.gemini.blueprint.extender.internal.support.TestTaskExecutor;
-import org.eclipse.gemini.blueprint.extender.support.internal.ConfigUtils;
 import org.eclipse.gemini.blueprint.mock.EntryLookupControllingMockBundle;
 import org.eclipse.gemini.blueprint.mock.MockBundle;
 import org.eclipse.gemini.blueprint.mock.MockBundleContext;
 import org.eclipse.gemini.blueprint.mock.MockServiceRegistration;
+import org.eclipse.gemini.blueprint.util.ConfigUtils;
 import org.osgi.framework.Bundle;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.BundleEvent;

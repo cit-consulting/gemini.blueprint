@@ -24,6 +24,7 @@ import java.util.TimerTask;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.eclipse.gemini.blueprint.util.concurrent.Counter;
 import org.osgi.framework.Bundle;
 import org.osgi.framework.Filter;
 import org.springframework.beans.BeansException;
@@ -36,7 +37,6 @@ import org.eclipse.gemini.blueprint.context.event.OsgiBundleApplicationContextEv
 import org.eclipse.gemini.blueprint.context.event.OsgiBundleContextFailedEvent;
 import org.eclipse.gemini.blueprint.extender.OsgiServiceDependencyFactory;
 import org.eclipse.gemini.blueprint.extender.event.BootstrappingDependenciesFailedEvent;
-import org.eclipse.gemini.blueprint.extender.internal.util.concurrent.Counter;
 import org.eclipse.gemini.blueprint.service.importer.event.OsgiServiceDependencyEvent;
 import org.eclipse.gemini.blueprint.util.OsgiFilterUtils;
 import org.eclipse.gemini.blueprint.util.OsgiStringUtils;

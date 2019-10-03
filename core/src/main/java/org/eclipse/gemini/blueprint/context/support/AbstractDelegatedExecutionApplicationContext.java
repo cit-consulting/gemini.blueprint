@@ -21,7 +21,7 @@ import org.eclipse.gemini.blueprint.context.OsgiBundleApplicationContextExecutor
 import org.eclipse.gemini.blueprint.context.event.*;
 import org.eclipse.gemini.blueprint.util.OsgiBundleUtils;
 import org.eclipse.gemini.blueprint.util.OsgiStringUtils;
-import org.eclipse.gemini.blueprint.util.internal.PrivilegedUtils;
+import org.eclipse.gemini.blueprint.util.PrivilegedUtils;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
 import org.springframework.beans.factory.config.BeanPostProcessor;
