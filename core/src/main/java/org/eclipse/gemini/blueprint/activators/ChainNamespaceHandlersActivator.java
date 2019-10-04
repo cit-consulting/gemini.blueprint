@@ -17,7 +17,7 @@ public class ChainNamespaceHandlersActivator implements BundleActivator {
 
     private final BundleActivator[] CHAIN;
 
-    ChainNamespaceHandlersActivator() {
+    public ChainNamespaceHandlersActivator() {
         final NamespaceHandlerActivator activateCustomNamespaceHandling = new NamespaceHandlerActivator();
         final NamespaceHandlerActivator activateBlueprintspecificNamespaceHandling = new BlueprintNamespaceHandlerActivator();
 
