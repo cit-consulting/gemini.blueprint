@@ -30,7 +30,7 @@ import org.springframework.util.ObjectUtils;
  * @author Costin Leau
  * 
  */
-public class DefaultConfigurationScanner implements ConfigurationScanner {
+public class XmlConfigurationScanner implements ConfigurationScanner {
 
 	private static final String CONTEXT_DIR = "/META-INF/spring/";
 

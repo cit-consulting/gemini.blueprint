@@ -49,6 +49,7 @@ import org.springframework.beans.factory.support.SecurityContextProvider;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextException;
 import org.springframework.context.support.AbstractRefreshableApplicationContext;
+import org.springframework.context.support.GenericApplicationContext;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.ResourcePatternResolver;
 import org.springframework.util.Assert;
@@ -85,7 +86,7 @@ import org.springframework.util.StringUtils;
  * @author Hal Hildebrand
  * 
  */
-public abstract class AbstractOsgiBundleApplicationContext extends AbstractRefreshableApplicationContext implements
+public abstract class AbstractOsgiBundleApplicationContext extends GenericApplicationContext implements
 		ConfigurableOsgiBundleApplicationContext {
 
 	private static final String EXPORTER_IMPORTER_DEPENDENCY_MANAGER =
