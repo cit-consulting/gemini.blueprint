@@ -13,7 +13,7 @@
     <artifactId>gemini-blueprint-web</artifactId>
     <version>3.0.0.M01_CITC3</version>
     <packaging>jar</packaging>
-    <name>Gemini Blueprint Web Extender</name>
+    <name>Gemini Blueprint Web</name>
 
     <properties>
         <gemini.blueprint.version.range.nq>[${parent.version},3.1.0)</gemini.blueprint.version.range.nq>
