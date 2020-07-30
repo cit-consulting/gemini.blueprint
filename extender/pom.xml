@@ -13,7 +13,7 @@
     <artifactId>gemini-blueprint-extender</artifactId>
     <packaging>jar</packaging>
     <name>Gemini Blueprint Extender</name>
-    <version>3.0.0.M01_CITC2</version>
+    <version>3.0.0.M01_CITC3</version>
     <url>http://www.eclipse.org/gemini/blueprint/</url>
 
     <description>
@@ -25,20 +25,28 @@
         <javadoc.loc>${basedir}/../docs/src/javadoc</javadoc.loc>
         <spring.osgi.symbolic.name>${symName.prefix}.extender</spring.osgi.symbolic.name>
         <bundle.description>${project.description}</bundle.description>
-        <gemini.blueprint.version.range.nq>[${parent.version},3.0.1)</gemini.blueprint.version.range.nq>
+        <gemini.blueprint.version.range.nq>[${parent.version},3.1.0)</gemini.blueprint.version.range.nq>
     </properties>
 
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.apache.karaf.bundle/org.apache.karaf.bundle.core -->
+        <dependency>
+            <groupId>org.apache.karaf.bundle</groupId>
+            <artifactId>org.apache.karaf.bundle.core</artifactId>
+            <version>4.2.6</version>
+            <scope>provided</scope>
+        </dependency>
+
         <dependency>
             <groupId>org.eclipse.gemini.blueprint</groupId>
             <artifactId>gemini-blueprint-mock</artifactId>
-            <version>${parent.version}</version>
+            <version>${base.project.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.eclipse.gemini.blueprint</groupId>
             <artifactId>gemini-blueprint-core</artifactId>
-            <version>3.0.0.M01_CITC2</version>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>org.eclipse.gemini.blueprint</groupId>
@@ -92,4 +100,12 @@
             </plugin>
         </plugins>
     </build>
+    <distributionManagement>
+        <repository>
+            <id>CITCMain</id>
+            <url>
+                https://maven1.citc.ru/content/repositories/citc-opensource
+            </url>
+        </repository>
+    </distributionManagement>
 </project>

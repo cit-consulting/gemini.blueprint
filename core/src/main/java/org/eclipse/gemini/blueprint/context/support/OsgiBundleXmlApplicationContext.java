@@ -34,6 +34,7 @@ import org.springframework.beans.factory.xml.DelegatingEntityResolver;
 import org.springframework.beans.factory.xml.NamespaceHandlerResolver;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.GenericApplicationContext;
 import org.springframework.util.Assert;
 import org.xml.sax.EntityResolver;
 
@@ -101,39 +102,10 @@ public class OsgiBundleXmlApplicationContext extends AbstractDelegatedExecutionA
     }
 
     @Override
-	protected void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {
+    protected void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {
         super.postProcessBeanFactory(beanFactory);
         // Create a new XmlBeanDefinitionReader for the given BeanFactory.
-        XmlBeanDefinitionReader beanDefinitionReader = new XmlBeanDefinitionReader(this.getDefaultListableBeanFactory());
-
-        // Configure the bean definition reader with the context
-        // resource loading environment.
-        beanDefinitionReader.setResourceLoader(this);
-
-        // add a specialized DocumentLoader to load blueprint configs w/o a schema location
-        beanDefinitionReader.setDocumentLoader(new BlueprintDocumentLoader());
-
-        final Object[] resolvers = new Object[2];
-
-        final BundleContext ctx = getBundleContext();
-
-        if (System.getSecurityManager() != null) {
-            AccessController.doPrivileged(new PrivilegedAction<Object>() {
-                public Object run() {
-                    String filter = BundleUtils.createNamespaceFilter(ctx);
-                    resolvers[0] = createNamespaceHandlerResolver(ctx, filter, getClassLoader());
-                    resolvers[1] = createEntityResolver(ctx, filter, getClassLoader());
-                    return null;
-                }
-            });
-        } else {
-            String filter = BundleUtils.createNamespaceFilter(ctx);
-            resolvers[0] = createNamespaceHandlerResolver(ctx, filter, getClassLoader());
-            resolvers[1] = createEntityResolver(ctx, filter, getClassLoader());
-        }
-
-        beanDefinitionReader.setNamespaceHandlerResolver((NamespaceHandlerResolver) resolvers[0]);
-        beanDefinitionReader.setEntityResolver((EntityResolver) resolvers[1]);
+        XmlBeanDefinitionReader beanDefinitionReader = createXmlBeanDefinitionReader(this);
 
         // Allow a subclass to provide custom initialisation of the reader,
         // then proceed with actually loading the bean definitions.
@@ -145,8 +117,40 @@ public class OsgiBundleXmlApplicationContext extends AbstractDelegatedExecutionA
         }
     }
 
+    XmlBeanDefinitionReader createXmlBeanDefinitionReader(AbstractOsgiBundleApplicationContext ctx) {
+        // Create a new XmlBeanDefinitionReader for the given BeanFactory.
+        XmlBeanDefinitionReader beanDefinitionReader = new XmlBeanDefinitionReader(ctx.getDefaultListableBeanFactory());
 
+        // Configure the bean definition reader with the context
+        // resource loading environment.
+        beanDefinitionReader.setResourceLoader(this);
 
+        // add a specialized DocumentLoader to load blueprint configs w/o a schema location
+        beanDefinitionReader.setDocumentLoader(new BlueprintDocumentLoader());
+
+        final Object[] resolvers = new Object[2];
+
+        final BundleContext bundleCtx = ctx.getBundleContext();
+
+        if (System.getSecurityManager() != null) {
+            AccessController.doPrivileged(new PrivilegedAction<Object>() {
+                public Object run() {
+                    String filter = BundleUtils.createNamespaceFilter(bundleCtx);
+                    resolvers[0] = createNamespaceHandlerResolver(bundleCtx, filter, getClassLoader());
+                    resolvers[1] = createEntityResolver(bundleCtx, filter, getClassLoader());
+                    return null;
+                }
+            });
+        } else {
+            String filter = BundleUtils.createNamespaceFilter(bundleCtx);
+            resolvers[0] = createNamespaceHandlerResolver(bundleCtx, filter, getClassLoader());
+            resolvers[1] = createEntityResolver(bundleCtx, filter, getClassLoader());
+        }
+
+        beanDefinitionReader.setNamespaceHandlerResolver((NamespaceHandlerResolver) resolvers[0]);
+        beanDefinitionReader.setEntityResolver((EntityResolver) resolvers[1]);
+        return beanDefinitionReader;
+    }
 
     /**
      * Allows subclasses to do custom initialisation here.
@@ -275,13 +279,13 @@ public class OsgiBundleXmlApplicationContext extends AbstractDelegatedExecutionA
     private NamespaceHandlerResolver lookupNamespaceHandlerResolver(final BundleContext bundleContext, String filter,
                                                                     final Object fallbackObject) {
         return (NamespaceHandlerResolver) TrackingUtil.getService(new Class<?>[]{NamespaceHandlerResolver.class},
-                filter, NamespaceHandlerResolver.class.getClassLoader(), bundleContext, fallbackObject);
+                                                                  filter, NamespaceHandlerResolver.class.getClassLoader(), bundleContext, fallbackObject);
     }
 
     private EntityResolver lookupEntityResolver(final BundleContext bundleContext, String filter,
                                                 final Object fallbackObject) {
         return (EntityResolver) TrackingUtil.getService(new Class<?>[]{EntityResolver.class}, filter,
-                EntityResolver.class.getClassLoader(), bundleContext, fallbackObject);
+                                                        EntityResolver.class.getClassLoader(), bundleContext, fallbackObject);
     }
 
     public String[] getConfigLocations() {

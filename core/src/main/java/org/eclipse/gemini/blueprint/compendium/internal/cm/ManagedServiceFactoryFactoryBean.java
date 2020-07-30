@@ -35,7 +35,7 @@ import org.eclipse.gemini.blueprint.service.exporter.support.OsgiServiceFactoryB
 import org.eclipse.gemini.blueprint.service.exporter.support.ServicePropertiesChangeListener;
 import org.eclipse.gemini.blueprint.service.importer.support.internal.collection.DynamicCollection;
 import org.eclipse.gemini.blueprint.util.OsgiServiceUtils;
-import org.eclipse.gemini.blueprint.util.internal.MapBasedDictionary;
+import org.eclipse.gemini.blueprint.util.MapBasedDictionary;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.Constants;
 import org.osgi.framework.ServiceRegistration;

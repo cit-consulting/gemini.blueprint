@@ -13,6 +13,7 @@
     <artifactId>gemini-blueprint-io</artifactId>
     <packaging>jar</packaging>
     <name>Gemini Blueprint IO</name>
+    <version>3.0.0.M01_CITC3</version>
     <url>http://www.eclipse.org/gemini/blueprint/</url>
     <description>
         Eclipse Gemini Blueprint IO abstract classes. Provides Resource, ResourceLoader and ResourcePatternResolver for
@@ -29,6 +30,7 @@
         <dependency>
             <groupId>org.eclipse.gemini.blueprint</groupId>
             <artifactId>gemini-blueprint-mock</artifactId>
+            <version>${base.project.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -60,4 +62,12 @@
             </plugin>
         </plugins>
     </build>
+    <distributionManagement>
+        <repository>
+            <id>CITCMain</id>
+            <url>
+                https://maven1.citc.ru/content/repositories/citc-opensource
+            </url>
+        </repository>
+    </distributionManagement>
 </project>

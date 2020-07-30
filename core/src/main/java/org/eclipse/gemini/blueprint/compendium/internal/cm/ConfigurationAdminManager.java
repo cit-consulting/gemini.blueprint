@@ -21,7 +21,7 @@ import java.util.Map;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.eclipse.gemini.blueprint.util.OsgiServiceUtils;
-import org.eclipse.gemini.blueprint.util.internal.MapBasedDictionary;
+import org.eclipse.gemini.blueprint.util.MapBasedDictionary;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceRegistration;
 import org.osgi.service.cm.ConfigurationException;

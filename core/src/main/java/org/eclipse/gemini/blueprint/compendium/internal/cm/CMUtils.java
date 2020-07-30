@@ -21,12 +21,11 @@ import java.util.Dictionary;
 import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.Map;
-import java.util.Properties;
 
 import org.eclipse.gemini.blueprint.util.OsgiBundleUtils;
 import org.eclipse.gemini.blueprint.util.OsgiServiceUtils;
 import org.eclipse.gemini.blueprint.util.OsgiStringUtils;
-import org.eclipse.gemini.blueprint.util.internal.MapBasedDictionary;
+import org.eclipse.gemini.blueprint.util.MapBasedDictionary;
 import org.osgi.framework.Bundle;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.Constants;

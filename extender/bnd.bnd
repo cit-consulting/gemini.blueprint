@@ -14,6 +14,7 @@ Import-Package: org.eclipse.gemini.blueprint.extensions.annotation;resolution:=o
  org.eclipse.gemini.blueprint.blueprint.*;version=${gemini.blueprint.version.range}, \
  org.eclipse.gemini.blueprint.*;version=${gemini.blueprint.version.range}, \
  org.springframework.*;version=${spring.version.range}, \
+ org.apache.karaf.bundle.core;resolution:=optional, \
  *;resolution:=optional
 
 Bundle-Activator: org.eclipse.gemini.blueprint.extender.internal.boot.ChainActivator

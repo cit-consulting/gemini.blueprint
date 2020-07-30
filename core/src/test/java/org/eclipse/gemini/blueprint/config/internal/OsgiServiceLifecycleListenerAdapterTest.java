@@ -30,7 +30,7 @@ import org.eclipse.gemini.blueprint.service.importer.ImportedOsgiServiceProxy;
 import org.eclipse.gemini.blueprint.service.importer.OsgiServiceLifecycleListener;
 import org.eclipse.gemini.blueprint.service.importer.ServiceReferenceProxy;
 import org.eclipse.gemini.blueprint.service.importer.support.internal.aop.StaticServiceReferenceProxy;
-import org.eclipse.gemini.blueprint.util.internal.MapBasedDictionary;
+import org.eclipse.gemini.blueprint.util.MapBasedDictionary;
 import org.osgi.framework.ServiceReference;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.eclipse.gemini.blueprint.mock.MockServiceReference;

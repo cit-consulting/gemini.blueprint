@@ -5,7 +5,7 @@
     <groupId>org.eclipse.gemini.blueprint</groupId>
     <artifactId>gemini-blueprint</artifactId>
     <!-- Note: When updating the version, ensure it is a valid OSGi version -->
-    <version>3.0.0.M01_CITC2</version>
+    <version>3.0.0.M01</version>
     <packaging>pom</packaging>
     <name>Gemini Blueprint</name>
     <url>http://www.eclipse.org/gemini/blueprint/</url>
@@ -20,10 +20,11 @@
 
     <properties>
         <!-- Source file encoding -->
+        <base.project.version>3.0.0.M01</base.project.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <!-- Spring version -->
-        <spring.maven.artifact.version>5.1.5.RELEASE_1</spring.maven.artifact.version>
+        <spring.maven.artifact.version>5.2.2.RELEASE_1</spring.maven.artifact.version>
         <spring.base.version>5.0.0</spring.base.version>
 
         <symName.prefix>org.eclipse.gemini.blueprint</symName.prefix>
@@ -397,9 +398,9 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-deploy-plugin</artifactId>
                     <version>2.8.2</version>
-                    <configuration>
-                        <skip>true</skip>
-                    </configuration>
+<!--                    <configuration>-->
+<!--                        <skip>true</skip>-->
+<!--                    </configuration>-->
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -1017,6 +1018,15 @@
 <!--            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>-->
 <!--        </repository>-->
 <!--    </distributionManagement>-->
+
+
+    <distributionManagement>
+        <repository>
+            <id>CITCMain</id>
+            <url>https://maven1.citc.ru/content/repositories/citc-opensource</url>
+        </repository>
+    </distributionManagement>
+
 
 
     <!-- ================================================ -->

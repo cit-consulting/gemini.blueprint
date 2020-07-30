@@ -17,6 +17,7 @@ package org.eclipse.gemini.blueprint.test;
 import java.net.URL;
 import java.util.Enumeration;
 
+import org.eclipse.gemini.blueprint.util.ConfigUtils;
 import org.eclipse.gemini.blueprint.util.OsgiBundleUtils;
 import org.eclipse.gemini.blueprint.util.OsgiListenerUtils;
 import org.eclipse.gemini.blueprint.util.OsgiStringUtils;
@@ -25,6 +26,7 @@ import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceEvent;
 import org.osgi.framework.ServiceListener;
 import org.springframework.util.ObjectUtils;
+import org.eclipse.gemini.blueprint.util.concurrent.Counter;
 
 /**
  * JUnit superclass which offers synchronization for application context

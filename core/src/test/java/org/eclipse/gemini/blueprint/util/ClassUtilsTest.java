@@ -25,6 +25,7 @@ import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.HierarchicalBeanFactory;
 import org.springframework.beans.factory.ListableBeanFactory;
+import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -32,6 +33,8 @@ import org.springframework.context.Lifecycle;
 import org.springframework.context.MessageSource;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.AbstractRefreshableApplicationContext;
+import org.springframework.context.support.GenericApplicationContext;
+import org.springframework.core.AliasRegistry;
 import org.springframework.core.env.EnvironmentCapable;
 import org.springframework.core.io.DefaultResourceLoader;
 import org.springframework.core.io.ResourceLoader;
@@ -108,7 +111,9 @@ public class ClassUtilsTest extends TestCase {
                 ResourceLoader.class,
                 AutoCloseable.class,
                 AbstractOsgiBundleApplicationContext.class,
-                AbstractRefreshableApplicationContext.class,
+                GenericApplicationContext.class,
+                BeanDefinitionRegistry.class,
+                AliasRegistry.class,
                 AbstractApplicationContext.class,
                 DefaultResourceLoader.class
         );

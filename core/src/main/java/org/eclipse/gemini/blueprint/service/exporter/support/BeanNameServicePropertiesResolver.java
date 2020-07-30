@@ -20,7 +20,7 @@ import java.util.Map;
 import org.eclipse.gemini.blueprint.context.BundleContextAware;
 import org.eclipse.gemini.blueprint.service.exporter.OsgiServicePropertiesResolver;
 import org.eclipse.gemini.blueprint.util.OsgiBundleUtils;
-import org.eclipse.gemini.blueprint.util.internal.MapBasedDictionary;
+import org.eclipse.gemini.blueprint.util.MapBasedDictionary;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.Constants;
 import org.springframework.beans.factory.InitializingBean;

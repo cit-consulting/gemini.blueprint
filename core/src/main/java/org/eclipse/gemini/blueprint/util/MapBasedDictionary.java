@@ -12,7 +12,7 @@
  *   VMware Inc.
  *****************************************************************************/
 
-package org.eclipse.gemini.blueprint.util.internal;
+package org.eclipse.gemini.blueprint.util;
 
 import java.util.Collection;
 import java.util.Dictionary;

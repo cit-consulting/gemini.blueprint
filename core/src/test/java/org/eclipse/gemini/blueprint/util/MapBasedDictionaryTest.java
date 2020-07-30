@@ -21,8 +21,6 @@ import java.util.Properties;
 
 import junit.framework.TestCase;
 
-import org.eclipse.gemini.blueprint.util.internal.MapBasedDictionary;
-
 /**
  * Test for the Dictionary contract of {@link MapBasedDictionary}.
  * 

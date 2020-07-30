@@ -27,7 +27,7 @@ import org.eclipse.gemini.blueprint.service.exporter.support.internal.controller
 import org.eclipse.gemini.blueprint.service.exporter.support.internal.support.*;
 import org.eclipse.gemini.blueprint.util.OsgiServiceUtils;
 import org.eclipse.gemini.blueprint.util.internal.ClassUtils;
-import org.eclipse.gemini.blueprint.util.internal.MapBasedDictionary;
+import org.eclipse.gemini.blueprint.util.MapBasedDictionary;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.Constants;
 import org.osgi.framework.ServiceFactory;

@@ -1,10 +1,15 @@
 Export-Package: \
- !*.internal.*, \
- org.eclipse.gemini.blueprint.context.*;version=${project.version}
+ org.eclipse.gemini.blueprint.context.support.web;version=${project.version}, \
+ !*
+
 
 Import-Package: \
  org.osgi.framework;version=1.3, \
+ org.eclipse.gemini.blueprint.context.support, \
  org.osgi.service.packageadmin;version=1.2, \
+ org.springframework.web.context, \
+ org.springframework.beans.factory, \
+ org.springframework.context, \
  *;resolution:=optional
 
 Bundle-Name: ${project.artifactId}

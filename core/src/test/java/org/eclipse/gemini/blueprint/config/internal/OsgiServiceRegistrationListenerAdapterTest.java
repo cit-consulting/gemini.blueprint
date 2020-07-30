@@ -26,7 +26,7 @@ import junit.framework.TestCase;
 import static org.easymock.EasyMock.*;
 import org.eclipse.gemini.blueprint.config.internal.adapter.OsgiServiceRegistrationListenerAdapter;
 import org.eclipse.gemini.blueprint.service.exporter.OsgiServiceRegistrationListener;
-import org.eclipse.gemini.blueprint.util.internal.MapBasedDictionary;
+import org.eclipse.gemini.blueprint.util.MapBasedDictionary;
 import org.osgi.framework.Bundle;
 import org.osgi.framework.ServiceFactory;
 import org.osgi.framework.ServiceRegistration;
